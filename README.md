@@ -1,4 +1,4 @@
-# ELTE Webprogramming subject (3. semester)
+# ELTE computer science - Webprogramming subject (3. semester)
 *Baráth Réka*
 
 .<br>
