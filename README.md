@@ -10,7 +10,7 @@
 |&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;|_ ...<br>
 |&nbsp;&nbsp;&nbsp;|<br>
 |&nbsp;&nbsp;&nbsp;|_ background.jpg<br>
-|&nbsp;&nbsp;&nbsp;|<br>
+|<br>
 |_ constants.js<br>
 |_ index.html<br>
 |_ script.js<br>
