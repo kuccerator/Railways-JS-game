@@ -1,0 +1,303 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 1000;
+    background-image: url('images/background.jpg');
+    background-size: cover;         
+    background-position: center;   
+    background-repeat: no-repeat;   
+    height: 100vh;                  
+    width: auto;
+    margin: 0;    
+    overflow: hidden;
+} 
+.hidden{
+    display: none;
+}
+#menu.hidden {
+    display: none !important; 
+}
+#title {
+    width: 40%;
+}
+#name{
+    border: solid #cc9900;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: burlywood;
+    width: 100%;
+    background-color: floralwhite;
+    margin-top: 2%;
+    box-shadow: 0 4px 15px #cc9900;
+}
+#name::placeholder {
+    color: #cc9900;
+}
+#name:hover{
+    background-color: #cc9900;
+    border-color: #804000;
+    color:antiquewhite;
+}
+#name:hover::placeholder {
+    color: whitesmoke;
+}
+#difficulty, #description {
+    border: solid olive;
+    color: olive;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    width: 100%;
+    background-color: floralwhite;
+}
+#difficulty {
+    box-shadow: 0 4px 15px olive;
+}
+.difficulty-label {
+    margin-left: 20%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.difficulty-option {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.difficulty-button, .description-button, .menu-button, .start-button, .leaderboard-button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.difficulty-button, .menu-button, .leaderboard-button {
+    background-color: beige;
+    color: olive;
+    border: solid olive;
+}
+.start-button, .description-button {
+    background-color: mintcream;
+    color: darkslategray;
+    border: solid darkslategrey;
+    box-shadow: 0 4px 15px darkslategray;    
+    font-size: 1.3rem;
+}
+.difficulty-button{
+    width: 80%;
+    font-size: 1em;
+}
+.description-button{
+    margin-left: 20%;
+}
+.difficulty-button:hover, .menu-button:hover, .selected {
+    background-color: olive;
+    color: antiquewhite;
+    border: solid darkolivegreen;
+}
+.difficulty-button:hover {
+    font-size: 1.2em;
+}
+.description-button:hover, .start-button:hover {
+    background-color: darkslategray;
+    color: antiquewhite;
+    border: solid black;
+}
+.warning {
+    border-width: 5px !important;
+    border-color: #6a1b1a !important;
+    background-color: #f2d1d1 !important;
+    box-shadow: 0 4px 15px #6a1b1a !important;
+    color:#6a1b1a !important;
+}
+
+/* LEÍRÁS */
+#description{
+    background-color: whitesmoke;
+    font-weight: bold;
+    font-size: 1rem;
+    color:saddlebrown;
+    border-color: saddlebrown;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+#description img{
+    width: 10rem;
+}
+#description p, #description table{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
+}
+.menu-button {
+    margin-bottom: 1%;
+}
+.menu-button-box {
+    text-align: center;
+}
+h2{
+    text-align: center;
+    margin-top: 1% !important;
+    font-weight: bold !important; 
+    color: saddlebrown;
+    font-size: 2rem !important; 
+}
+table td{
+    width: 15%;
+    text-align: center;
+    table-layout: fixed !important;
+}
+
+/* JÁTÉK */
+.title2 {
+    margin-top: 5%;
+    margin-left: 20%;
+    width: 50% !important;
+}
+.title2:hover {
+    width: 60% !important;
+}
+#quit {
+    font-weight: bold;
+    color:#6a1b1a;
+    text-align: center;
+    font-size: 1.2;
+    background-color: bisque;
+    border-radius: 5px;
+    width: 60%;
+    margin-left: 15%;
+}
+details {
+    margin-bottom: 10px;
+}
+
+summary {
+    color:#cc9900;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 15%;
+}
+
+summary:hover {
+    background-color: #804000;
+    color: bisque;
+}
+
+details ul {
+    background-color: bisque;
+    border: 2px solid #804000;
+    border-radius: 5px;
+    width: 50%;
+    font-weight: bold;
+    color:#804000;
+    font-size: 0.8em;
+    margin-bottom: 0;
+}
+.timer {
+    font-weight: bold;
+    color: darkslategrey;
+    font-size: 2em;
+    border: solid darkslategray;
+    border-radius: 10px;
+    width: 50%;
+    background-color: beige;
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: 20%;
+    box-shadow: 0 4px 15px darkslategray;
+}
+.timer:hover {
+    box-shadow: 5px 10px 15px darkslategray;
+}
+.tag {
+    margin-top: 2%;
+    font-size: 1.5rem;
+    color: #333333;
+    text-shadow: 0 4px 15px darkslategray;
+}
+#track table {
+    border-collapse: collapse;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-right: 5%;
+    border: 15px solid #cc9900;
+    box-shadow: 0 4px 15px black;
+    width: auto;
+    height: 80%;
+}
+.winner {
+    border: 15px solid green !important;
+}
+.winnerTag {
+    color: green !important;
+}
+.game-arrange {
+    display: flex;
+    gap: 0%;
+}
+.game-arrange > div:first-child {
+    flex: 4;
+}
+.game-arrange > div:last-child {
+    flex: 5;
+}
+#game table td{
+    text-align: center; 
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+} 
+#game table img:hover {
+    width: 110%;
+}
+.big-table td {
+    width: 5em;
+    height: 5em;
+}
+.little-table td {
+    width: 7em;
+    height: 7em;
+}
+.big-table img, .little-table img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover !important;
+    display: block;
+}
+#winnerQuit, #toplist {
+    color: green;
+    border: solid green;
+}
+#winnerQuit {
+    margin-left: 27%;
+}
+#winnerQuit:hover, .leaderboard-button:hover {
+    background-color: whitesmoke;
+}
+.disable-click {
+    pointer-events: none;
+}
+
+/* RANGLISTA */
+#leaderboard {
+    font-weight: bold;
+    color: #333333;
+    text-align: center;
+    font-size: 1.7em;
+}
+ol {
+    list-style-type: none;
+}
+.diff-label {
+    font-size: 2.3em;
+    text-shadow: 0 4px 15px darkslategray;
+    color: #333333;
+}

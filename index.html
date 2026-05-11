@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAYS : A királyság vasúthálózata</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <section id="menu" class="hidden container d-flex flex-column align-items-center mt-5">
+        <img src="images/menu/title.png" id="title" class="translate-middle">
+
+        <form class="w-50 my-3">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="  ADD MEG A NEVED!" maxlength="12">
+           </div>
+
+           <div id="difficulty" class="form-group">
+                <p class="difficulty-label">ÁLLÍTSD BE A NEHÉZSÉGET!</p>
+                <div class="difficulty-option">
+                    <button id="easy" class="difficulty-button">5x5</button>
+                    <label for="easy">KÖNNYŰ</label>
+                </div>
+                <div class="difficulty-option">
+                    <button id="hard" class="difficulty-button">7x7</button>
+                    <label for="hard">NEHÉZ</label>
+                </div>
+           </div>
+            
+           <div class="mt-2">
+            <button class="description-button nav-button" data-target="description">LEÍRÁS</button>
+            <button class="start-button nav-button" data-target="game" disabled>JÁTÉK INDÍTÁSA</button>
+           </div>
+        </form>
+    </section>
+    <section id="description" class="hidden">
+        <h2>Játékleírás</h2>
+        <p>Nekeresdországban Nevenincs király szeretne egy körvasutat építeni, amely bejárja a birodalmának minden szegletét. A feladat megvalósítása Furfangra, az udvari tanácsosra vár, akinek a munkáját nehezíti a királyság változatos tája. Segítsünk Furfangnak megtervezni a királyság vasúthálózatához tartozó térképet!
+        <br>A játék különböző méretű négyzetrácsos hálón játszódhat, ahol a célunk az, hogy egy összefüggő körvasútvonalat alkossunk úgy, hogy minden olyan helyre eljusson a vonat, ahova lehetséges.
+        A térképen több különböző típusú mező található, melyek a játék kezdetén látszódnak a térképen:</p>
+        <table>
+            <tr>
+                <td><img src="images/cells/empty.png" alt="Empty Cell"></td>
+                <td><img src="images/cells/bridge1.png" alt="Bridge"></td>
+                <td><img src="images/cells/mountain1.png" alt="Mountain"></td>
+                <td><img src="images/cells/oasis.png" alt="Oasis"></td>
+            </tr>
+            <tr id="field">
+                <td>ÜRES MEZŐ</td>
+                <td>HÍD MEZŐ</td>
+                <td>HEGY MEZŐ</td>
+                <td>OÁZIS MEZŐ</td>
+            </tr>
+            <tr>
+                <td>Ebben a cellában a vasútvonal a belépési irányon kívül maradék három irányba tud haladni.</td>
+                <td>Ezen a mezőn a vasútvonalat csak a híd által megadott egyenes írányban lehet megépíteni.</td>
+                <td>Ezeken a mezőkön a sziklák a cellának két szomszédos kijáratát lezárják, így csak 90°-ban elfordulva lehet továbbhaladni.</td>
+                <td>Erre a cellára nem lehet vasutat építeni.
+                </td>
+            </tr>
+        </table>
+        <p>Mivel szeretnénk a vasúthálózat alapanyagán spórolni, így a vasúthálózat sehol nem keresztezheti önmagát, sehol nem ágazhat el, és nem haladhat át többször egy cellán!</p>
+        <div class="menu-button-box"><button class="menu-button nav-button" data-target="menu">Vissza a MENÜ-be</button></div>
+    </section>
+    <section id="game" class="hidden">
+        <div class="game-arrange">
+            <div>
+                <details>
+                    <summary>SÚGÓ</summary>
+                    <ul>
+                        <li><p>KATTINTÁS A CELLÁKRA: sínek váltogatása.</p></li>
+                        <li><p>SPACE : letörli az összes sínt, újrakezdheted az építést.</p></li>
+                        <li><p>Kilépéshez kattints a "RAILWAYS" képre:</p></li>
+                    </ul>
+                </details>
+                <img src="images/menu/title.png" id="title" class="translate-middle title2">
+                <div class="timer">
+                    <p id="player" class="tag">JÁTÉKOS:<br></p>
+                    <p id="username"></p>
+                    <p id="time-tag" class="tag">ELTELT IDŐ:<br></p>
+                    <div id="time-display">
+                        <p>INDUL...</p>
+                    </div>
+                </div>
+                <button id="winnerQuit" class="hidden menu-button nav-button" data-target="menu">KILÉPÉS</button>
+                <button id="toplist" class="hidden leaderboard-button nav-button" data-target="leaderboard">RANGLISTA</button>
+                <p id="quit"></p>
+            </div>
+            <div id="track">
+                <table></table>
+            </div>
+        </div>
+    </section>
+    <section id="leaderboard" class="hidden">
+        <p class="diff-label" >Könnyű szint:</p>
+        <ol id="leaderboard-easy"></ol>
+        <p class="diff-label" >Nehéz szint:</p>
+        <ol id="leaderboard-hard"></ol>
+        <button class="start-button nav-button" data-target="game">VISSZA</button>
+    </section>
+    <script src="script.js"></script>
+    <script src="constants.js"></script>
+</body>
+</html>
